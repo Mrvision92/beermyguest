@@ -294,7 +294,7 @@
       if (e.target.closest('[data-mi-del]')) { e.target.closest('[data-mi]').remove(); dirty = true; }
     });
     var read = function (mi) {
-      return { label: $('[data-mi-label]', mi).value, url: $('[data-mi-url]', mi).value, visible: $('[data-mi-vis]', mi).checked ? 1 : 0 };
+      return { label: $('[data-mi-label]', mi).value, label_en: ($('[data-mi-en]', mi) || {}).value || '', url: $('[data-mi-url]', mi).value, visible: $('[data-mi-vis]', mi).checked ? 1 : 0 };
     };
     menus.addEventListener('submit', function () {
       var tree = {};
@@ -336,7 +336,8 @@
       var tree = $$('[data-group]', ff).map(function (g) {
         return {
           id: g.dataset.id, label: $('[data-group-label]', g).value, visible: $('[data-group-vis]', g).checked ? 1 : 0,
-          terms: $$('[data-term]', g).map(function (t) { return { id: t.dataset.id, label: $('[data-term-label]', t).value, description: $('[data-term-desc]', t).value }; })
+          label_en: ($('[data-group-en]', g) || {}).value || '',
+          terms: $$('[data-term]', g).map(function (t) { return { id: t.dataset.id, label: $('[data-term-label]', t).value, description: $('[data-term-desc]', t).value, label_en: ($('[data-term-en]', t) || {}).value || '', description_en: ($('[data-term-desc-en]', t) || {}).value || '' }; })
         };
       });
       $('[data-tree]', ff).value = JSON.stringify(tree);

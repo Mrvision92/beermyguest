@@ -197,3 +197,12 @@ details.panel[open] summary { margin-bottom: 12px; }
 code.key { display: inline-block; margin: 6px 0; padding: 6px 10px; background: var(--bg, #f4f4f2); border: 1px solid var(--line); word-break: break-all; }
 .steps-list { margin: 0 0 12px; padding-left: 20px; line-height: 1.55; }
 .steps-list li + li { margin-top: 6px; }
+
+/* Version anglaise */
+.en-box { margin-top: 14px; border: 1px dashed var(--line); background: #fbfbf9; }
+.en-box > summary { padding: 10px 12px; cursor: pointer; font-weight: 600; }
+.en-box > summary small { margin-left: 6px; font-weight: 400; color: var(--muted); }
+.en-box__in { padding: 4px 12px 12px; }
+.en-item { margin: 10px 0; padding: 8px 10px; border: 1px solid var(--line); }
+.en-item legend { padding: 0 4px; font-size: .85rem; color: var(--muted); }
+.texts-en { margin-top: 4px; }

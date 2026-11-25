@@ -111,6 +111,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .site-head { position: fixed; inset: 0 0 auto; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--line); transition: background-color .3s, border-color .3s, color .3s; }
 .site-head__in { display: flex; align-items: center; justify-content: space-between; gap: 24px; max-width: 1360px; margin-inline: auto; padding-inline: var(--gut); min-height: var(--head-h); }
 .site-logo { position: relative; flex: none; display: block; width: 158px; margin-right: auto; }
+.lang-switch { position: relative; z-index: 2; order: 3; display: inline-flex; align-items: center; min-height: 44px; padding-inline: 6px; color: inherit; font: 600 .92rem/1 var(--text); letter-spacing: .04em; text-decoration: none; border-radius: var(--r-s); }
+.lang-switch:hover { text-decoration: underline; text-underline-offset: 4px; }
 .cart-link { position: relative; z-index: 2; order: 3; display: inline-flex; align-items: center; gap: 4px; min-height: 44px; padding-inline: 4px; color: inherit; text-decoration: none; font-weight: 500; }
 .cart-link:hover { opacity: .7; }
 .cart-link__count { font-size: .92rem; }
@@ -272,6 +274,7 @@ a.card, .card__link { color: inherit; text-decoration: none; }
 .intro__title { grid-column: 1 / 7; }
 .intro__pics { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); margin-top: 8px; }
 .intro__pics > :only-child { grid-column: 1 / -1; aspect-ratio: 21 / 9; }
+.intro__pics > :only-child img { object-position: center 72%; }
 .intro__body { grid-column: 7 / 13; color: var(--ink-2); }
 .intro__body .prose { font-size: 1.1rem; }
 .stats { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap); margin-top: 12px; border-top: 1px solid var(--line); padding-top: 20px; }
